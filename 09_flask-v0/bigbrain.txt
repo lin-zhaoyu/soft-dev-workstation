@@ -1,0 +1,35 @@
+Lucas Lee (Lewis Cass) + Kirby, Zhaoyu Lin + Timber
+SoftDev
+k09 -- First Thoughts on a Flask App
+2021-10-04
+
+Q0: Where have you seen similar syntax in other langs?
+It seems a bit like a constructor in Java without the `new` keyword
+Perhaps it is taking in the `__name__` constant and passing it to Flask in order to make a new object
+Then returns it to be saved as the `app` variable
+
+
+Q1: What points of reference do you have for meaning of '/'?
+I think it refers to the root or homepage of a website, as in there are no further specifications after the domain
+i.e. just http://127.0.0.1:5000/ and nothing after the final "/"
+"/" to me is the root directory of my system so it might make sense in the context of a webpage too
+
+Q2: Where will this print to?
+Directly to the terminal, since in Python, print statements go to the standard output
+Not the console of the webpage like `console.log` might in javascript
+
+Q3: What will it print?
+Since app.py was run directly from the terminal rather than from another module, the `__name__` variable is set to "__main__"
+Thus, it will print out "__main__" when printed
+
+# Q3: Will this appear anywhere? How u know?
+We don't think "No hablo queso" will be printed, since it is being returned instead of printed
+
+Q4: Where have you seen similar construcs in other languages?
+`run()` could be similar to executing a function with `function()` as seen in java
+
+Notes
+- The app keeps running indefinitely as a "development" server
+- The "No hablo queso" message actually does display directly on the webpage
+- Terminal does display __main__ as predicted
+    - Also shows HTTP GET requests when webpage is loaded
