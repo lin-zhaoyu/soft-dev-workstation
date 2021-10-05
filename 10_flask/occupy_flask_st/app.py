@@ -51,7 +51,7 @@ def display_occupations():
     <br/><br/>
     Random choice: {choice}
     <br/><br/>
-    {str(list(occupations.keys()))}
+    {list(occupations.keys())}
     '''
 
 
