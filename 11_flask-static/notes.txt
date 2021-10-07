@@ -1,0 +1,29 @@
+Blind Elmo: Lucas Lee (Lewis Cass), Zhaoyu Lin, Lucas Tom Wong (LTW)
+SoftDev
+k11 -- Static Flask App Experiments
+2021-10-07
+
+Predictionss
+- The code in the `if` statement will run since we run app.py from the terminal, so __name__ is set to "__main__"
+- Same as k10 v3 app.py, printing two messages to the terminal when the page is loaded
+    - First will be: "about to print __name__..."
+    - Then: "__main__" since the program is being called directly
+- Serves a webpage on localhost port 5000
+- Webpage will display "No hablo queso!" when on the "/" root page
+- Debug mode will be listed as "on"
+    - Maybe some extra information will be printed to the terminal
+    - Update code onto the website by auto reloading
+
+Notes
+- Webpage acts as expected, continues to run indefinitely
+- Debug mode is set on, and gives a debugging PIN
+- Messages only appear on the terminal after the webpage is loaded
+    - Redeploys page on changes to the file
+- Warns on being a "development server" and not to actually use for production
+- No HTML tags for the message, just a raw string "No hablo queso!"
+- Terminal displays HTTP GET Requests every time the page is loaded
+- Able to access two files in the "static" folder
+    - The regular "foo" file is downloaded
+    - The HTML version of "foo" is properly displayed as a page
+    - Corresponding HTTP GET requests listed in the terminal
+- If the "static" folder is renamed anything else, direct access is limitee=d
