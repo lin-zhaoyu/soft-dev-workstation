@@ -1,0 +1,23 @@
+Blind Elmo: Lucas Lee (Lewis Cass), Zhaoyu Lin, Lucas Tom Wong (LTW)
+SoftDev
+k12 -- Jinja Introduction
+2021-10-08
+
+Predictionss
+- importing the `render_template` function from flask module
+    - If removed, program will crash because the medthod is called in the
+"/my_foist_template" route
+- Using an additional route titled "/my_foist_template", use http://localhost:5000/my_foist_template to access
+- `render_template` method takes three arguments
+    - First one is what file to look for in the /templates folder
+    - Second two are linked to the variables used in the templates
+    - Will replace the variables on the wesbpage with whatever is passed in the method and display accordingly
+- The `for` loop will display each item in `collection` in order with a newline between each item
+
+Notes
+- Routes act as expected, serving a site at "/my_foist_template"
+    - "model_tmplt.html" cannot be accessed directly, unlike if it was in the "static" folder
+- Variable uses have double curly brackets
+- Control flow statements (such as the for loop)use one curly bracket and a percent symbol
+    - Also has an end statement, unlike Python
+    - For loop uses same syntax as Python
