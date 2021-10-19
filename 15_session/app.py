@@ -6,6 +6,8 @@
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
+from flask import session
+from flask import make_response
 import random
 
 #the conventional way:
@@ -40,8 +42,9 @@ def disp_loginpage():
     return render_template( 'login.html' )
 
 
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
+
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
@@ -53,26 +56,29 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
+
+
     username = "u"
     password = "1"
     list = ["greetings"]
     greetings = ['Hello Travelers','Welcome Travelers','Bonjour Travelers']
     greeting = str(random.choices(greetings))
-    response = "Logged in sucessful"
+    response = ""
 
     if(request.args['username'] != username):
-        response = "incorrect username<br>"
+        response = "incorrect username +++" #line break
     if(request.args['password'] != password):
-        response += ", incorrect password"
-    #     if(request.args['password'] == password):
-    #         response = "logged in sucessful"
-    #     else:
-    #         response = "incorrect password"
-    # else:
-        # response += "incorrect username"
+        response += "incorrect password"
 
-
-    return render_template('response.html',response = response,request_method=request.args['sub1'],greet=greeting)
+    if(response == ""):
+        response =  "logged in"
+    #cookies
+    resp = make_response(request.args['username'])
+    resp.set_cookie('userID', request.args['username'])
+    print(request.cookies.get('userID'))
+    return resp
+    # render_template('response.html',response = response,
+    # request_method=request.args['sub1'],greet=greeting)
     #return request.args['sub1']
     #return request.args['username']  #response to a form submission
     #return "Hello"
