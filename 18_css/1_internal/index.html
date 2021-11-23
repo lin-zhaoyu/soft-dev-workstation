@@ -1,34 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Clyde "Thluffy" Sinclair
-       SoftDev pd0
+<!-- PlaceHolders - Zhaoyu Lin, William Chen 
+       SoftDev pd1
        K18 -- CSS basics
        2021-11-23t
 
 	 WORK FILE for CSS 	
     -->
 
-  <head>
-    <meta charset="utf-8"/>
-    <title>foo title</title>
-  </head>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        .body {
+            background-color: grey;
+        }
 
-  <body>
-    <h1>foo heading 1</h1>
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
+        .footer {
+            /* position: absolute; */
+            bottom: 250px;
+            width: 100%;
+            background-color: #888888;
+            color: white;
+            /* text-align: center; */
+            text-indent: 500px;
+            /* height:100px; */
+            font-size: 30px;
+            /* margin: auto; */
+            position: absolute;
+        }
+
+        .header {
+            background-color: #C0C0C0;
+            position: absolute;
+            left: 210px;
+            width: 500px;
+            text-align: center;
+
+        }
+
+        .sidebar {
+            height: 53%;
+            /* Full-height: remove this if you want "auto" height */
+            width: 200px;
+            /* Set the width of the sidebar */
+            position: fixed;
+            /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            background-color: #A9A9A9;
+            /* Black */
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            padding-top: 20px;
+            list-style-type: none;
+            color: white;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #888888;
+            position: absolute;
+            left: 210px;
+            bottom: 300px;
+            width: 500px;
+
+        }
+
+        .list {
+            text-align: center;
+            list-style: none;
+            list-style-type: none;
+            color: white;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+            list-style: none;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul li {
+            text-decoration: none;
+        }
+    </style>
+    <title>Internal</title>
+</head>
+
+<body class="body">
+    <div class="header">
+        <h1>foo heading 1</h1>
+    </div>
+    <div class="sidebar">
+        <h3>nav foo</h3>
+
+        <ul>
+            <!-- <div class="list"></div> -->
+            <li><a href="">dis</a></li>
+            <li><a href="">dat</a></li>
+            <li><a href="">de udda ting</a></li>
+            <!-- </div> -->
+        </ul>
+
+    </div>
     <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
+    <div class="content">
+        <p>
+            Caran Pinnath Gothrimamin nurta i' fea tal dagore. Tanya nae n'quel tenna' telwan san' sana termara en'
+            templa yala onna
+            en' vilya. Hallaerea amin nauva auta yeste' lle merna salk lle tela? Estolada sinome lye nuquernuva sen e
+            dagor
+            Megiltura Avarierea. Lasta lalaithamin caela ie'lle Morsul sen.
+            <br />
+            Cala'quessir kwentra lye i'narn gurth gothrim tel' mithrim ed' i'ear ar' elenea!. Anarya elea ie' dome
+            i'narr en gothrim
+            glinuva nuin i'anor ho. Aaye amin weera yassen lle creoso, mellonamin Mith'quessir. Amin sinta thaliolle e
+            dagor quel
+            kaima Uialtum karn aduamin. Nogoth cuamin linduva yassen megrille uuner uma, n'dela no'ta lle naa curucuar.
 
-      <br>
-      <br>
+            Amin caela noa n'noa mani naa ta Amandil Cam'wethrin. Aierea lema ed' templa Elenya Ringare. Alduya
+            Belegerea cormlle
+            naa tanya tel'raa lova poldora. Llie n'vanima ar' lle atara lanneina quel esta i'quelin mori'quessier naa ba
+            mori'quessir ya naa nae tanya? Anarya sut an mani nae lle umien Kotyaerea.
+            <br />
+            <br />
+        </p>
+    </div>
 
-      Copyright &copy; 2021 Clyde "Thluffy" Sinclair
-
-  </body>
+    <div class="footer">Copyright &copy; 2021 PlaceHolders</div>
+</body>
 
 </html>
