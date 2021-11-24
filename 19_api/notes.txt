@@ -1,0 +1,10 @@
+# HaroldHuggers Zhao Yu Lin, William Chen
+# SoftDev
+# K19 -- CSS basics
+# 11-24-2021
+
+Notes
+- requests or urllib can used for requests
+- api keys are linked to emails
+- NASA api has a 1,000 request per hour limit that refreshes over a rolling basis.
+- Nasa also has a special DEMO_KEY with stricter rate limits

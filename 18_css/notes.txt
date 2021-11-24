@@ -1,0 +1,12 @@
+HaroldHuggers Zhao Yu Lin, William Chen
+SoftDev pd1
+K18 -- CSS basics
+2021-11-23t
+
+Main Takeaway:
+- Inline: Inside the html code.
+- Internal: Inside the html file, but separated from code.
+- External: Outside of the html and in it's own css file.
+
+Other notes:
+- Remember <link href="style.css" rel="stylesheet"> for external

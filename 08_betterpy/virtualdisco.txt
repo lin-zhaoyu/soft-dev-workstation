@@ -14,6 +14,7 @@ in different environments allows multiple versions of python and python librarie
 preventing conflict between different versions of these programs,
 and letting a single machine run python applications with different requirements.
 “~/” means the python environment is created in the home directory.
+
 Sources:
 https://docs.python.org/3/tutorial/venv.html
 https://realpython.com/python-virtual-environments-a-primer/
