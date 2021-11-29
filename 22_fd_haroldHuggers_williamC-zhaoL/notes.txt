@@ -1,0 +1,20 @@
+HaroldHuggers - William Chen, Zhao Yu Lin
+SoftDev
+K22- Foundations
+2021-12-01
+
+-Lets you prototype sites
+  -is good because prototypes can be simple
+-stable
+-designed for small devices and up
+-high fedelity: means the protype is already highly functional and interactive
+
+
+
+-CDN:
+-some central server that hosts a thing, lots of mirrors(CDNS) that host the same thing
+-make websites appear faster especially in mobile devices
+-these CDNs mirror the central servers
+-less traffic and congestion overall
+
+downsides: people that clone your repo has to wait for the servers to load
