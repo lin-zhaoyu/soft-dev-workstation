@@ -3,13 +3,18 @@ SoftDev
 K22- Foundations
 2021-12-01
 
+https://get.foundation/sites/docs/responsive-embed.html
+is a very useful site that tells you what can be done
+
+***Attractive Features
 -Lets you prototype sites
   -is good because prototypes can be simple
 -stable
 -designed for small devices and up
 -high fedelity: means the protype is already highly functional and interactive
-
-
+***Cool Features
+-embedded pictures --you can change the aspect ratios in foundation
+-embedded videos
 
 -CDN:
 -some central server that hosts a thing, lots of mirrors(CDNS) that host the same thing
