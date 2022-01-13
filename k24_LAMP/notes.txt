@@ -1,0 +1,4 @@
+sudo = super user
+sudo apt install
+sudo su unands responsibility
+sctrl -D
