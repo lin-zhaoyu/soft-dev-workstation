@@ -1,0 +1,86 @@
+installing apache:
+
+go to https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
+
+prerequisites:
+initial server setup guide
+
+1.log in as root user
+ssh root@"ipv4 address"
+-now you're logged in
+command line should be start with
+root@"droplet_name":~#
+
+~# adduser zhao
+-create pw, skip the other fields
+
+2.add user to sudo(to have superuser/root privileges)
+-this enables sudo
+
+~#usermod -aG sudo zhao
+-now can use sudo
+
+3.enable firewall - this is using UFW firewall instead of digital ocean
+~# ufw allow OpenSSH
+~#ufw enable
+
+4. enabe external access for everyday login
+-we're using SSH keys, so:
+pw authentication is disabled
+do:
+"rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy"
+
+5.
+DO THIS EVERYTIME TO LOG IN:
+open up a new terminal session with
+$ ssh "zhao@ipv4"
+should display a bunch of stuff
+
+you can now do $sudo command
+
+when prompted with pw, enter your pw when you created the session, in my case it's 1
+
+INSTALLING apache
+sudo apt update
+sudo apt install apache2
+
+only allow traffic to port 80
+sudo ufw allow in "Apache"
+
+now see it with either
+ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+curl http://icanhazip.com
+
+INSTALL mysql
+sudo apt install mysql-server
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
+pw strength: 1
+
+sudo mysql will access
+mysql>
+
+flask installation
+sudo apt-get install libapache2-mod-wsgi python-dev
+sudo a2enmod wsgi
+
+change to python3! - not python3 on the website
+sudo apt-get install python-pip
+
+<VirtualHost *:80>
+		ServerName cookieconsumer.com
+		ServerAdmin zlin20@stuy.edu
+		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
+		<Directory /var/www/FlaskApp/FlaskApp/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/FlaskApp/FlaskApp/static
+		<Directory /var/www/FlaskApp/FlaskApp/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
