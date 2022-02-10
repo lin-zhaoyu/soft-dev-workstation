@@ -93,13 +93,14 @@ function displayFact(n) {
 }
 displayFact(5);
 
-document.getElementById("facButton").addEventListener("click", count);
 
 let count = 0;
 function incrementFact() {
   count++;
   fact(count);
 }
+// document.getElementById("fibButton").addEventListener("click", count);
+
 //fib
 var fib = (n) => {
   if (n <= 1) return n;
