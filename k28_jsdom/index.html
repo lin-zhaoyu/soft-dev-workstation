@@ -9,18 +9,26 @@
 -->
 
 <html lang="en">
-  <!-- HTML file for exploring JavaScript interactions with the DOM -->
+<!-- HTML file for exploring JavaScript interactions with the DOM -->
 
-  <head>
+<head>
     <meta charset="utf-8">
     <style>
-      .red   {color : #ff0000;}
-      .green {color : #00ff00;}
-      .blue  {color : #0000ff;}
-    </style>
-  </head>
+        .red {
+            color: #ff0000;
+        }
 
-  <body>
+        .green {
+            color: #00ff00;
+        }
+
+        .blue {
+            color: #0000ff;
+        }
+    </style>
+</head>
+
+<body>
     <h1 id="h" class="blue">Hello World!</h1>
 
     <div id="div1" class="green">This is a div</div>
@@ -28,17 +36,23 @@
     <div class="blue">This is a toid div</div>
 
     <ol id="thelist">
-      <li class="">item 0</li>
-      <li class="green blue">item 1</li>
-      <li class="green blue">item 2</li>
-      <li class="red green blue">item 3</li>
-      <li class="red green blue">item 4</li>
-      <li class="green blue">item 5</li>
-      <li class="green blue">item 6</li>
-      <li class="">item 7</li>
+        <li class="">item 0</li>
+        <li class="green blue">item 1</li>
+        <li class="green blue">item 2</li>
+        <li class="red green blue">item 3</li>
+        <li class="red green blue">item 4</li>
+        <li class="green blue">item 5</li>
+        <li class="green blue">item 6</li>
+        <li class="">item 7</li>
+        <li id="fib" FIB FUNC id></li>
+        <button id="fibButton">CLICK</button>
+        <li id="fact" FIB FUNC id></li>
+        <li id="gcd" FIB FUNC id></li>
+
     </ol>
 
     <script src="dommy_consolery.js"></script>
 
-  </body>
+</body>
+
 </html>
