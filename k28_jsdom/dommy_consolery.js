@@ -93,13 +93,12 @@ function displayFact(n) {
 }
 displayFact(5);
 
-
 let count = 0;
 function incrementFact() {
   count++;
-  fact(count);
+  displayFact(count);
 }
-// document.getElementById("fibButton").addEventListener("click", count);
+document.getElementById("factButton").addEventListener("click", incrementFact);
 
 //fib
 var fib = (n) => {
@@ -113,6 +112,14 @@ function displayFib(n) {
   item.innerHTML = `fib(${n}) = ${fib(n)}`;
 }
 displayFib(12);
+
+let fibCount = 0;
+function incrementFib() {
+  fibCount++;
+  displayFib(fibCount);
+}
+document.getElementById("fibButton").addEventListener("click", incrementFib);
+
 // GCD
 
 var gcd = function (a, b) {
@@ -124,6 +131,14 @@ var gcd = function (a, b) {
   return gcd(d, c % d);
 }; //eucledian GCD
 function displaygcd(a, b) {
-  let item = document.getElementById("fib");
-  item.innerHTML = `gcd(${a}, ${b}) = ${displaygcd(a, b)}`;
+  let item = document.getElementById("gcd");
+  item.innerHTML = `gcd(${a}, ${b}) = ${gcd(a, b)}`;
 }
+displaygcd(5, 10);
+function newGcd() {
+  displaygcd(
+    document.getElementById("gcd1").value,
+    document.getElementById("gcd2").value
+  );
+}
+document.getElementById("gcdButton").addEventListener("click", newGcd);
